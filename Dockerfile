@@ -1,4 +1,5 @@
 FROM ubuntu:latest
-RUN touch test
-ENTRYPOINT ["ls"]
-CMD ["--help"]
+RUN mkdir sample_folder
+# WORKDIR : <full path> !!!
+WORKDIR /sample_folder
+RUN touch sample_file
